@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay Kumar | Cloud & DevOps Engineer Portfolio</title>
+    <meta name="description" content="Personal portfolio of Jay Kumar, a Cloud & DevOps Engineer specializing in Kubernetes, CI/CD, AWS, and Full-Stack Development.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Canvas for interactive particle background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>JK<span class="logo-bracket">/&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link active">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link contact-btn-nav">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle light/dark theme">
+                    <!-- Sun Icon (visible in dark mode) -->
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Moon Icon (visible in light mode) -->
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-greeting animate-fade-in">Hi there, I'm</span>
+                    <h1 class="hero-title animate-slide-up">Jay Kumar</h1>
+                    <h2 class="hero-subtitle animate-slide-up-delayed">
+                        I build <span id="typed-text" class="text-gradient"></span><span class="typed-cursor">|</span>
+                    </h2>
+                    <p class="hero-description animate-fade-in-delayed">
+                        Software Engineering student at Sharda University with a strong command over Java and Python, specializing in Data Structures & Algorithms, Mobile Applications, and Machine Learning.
+                    </p>
+                    <div class="hero-actions animate-fade-in-delayed">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Let's Connect</span>
+                            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <span>View Projects</span>
+                        </a>
+                    </div>
+                    <div class="hero-socials animate-fade-in-delayed">
+                        <a href="https://github.com/Jaykumar06" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jay-kumar-8900092a2" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                        <a href="mailto:jaykumarshrivatsav1@gmail.com" aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual animate-scale-in">
+                    <div class="profile-picture-wrapper">
+                        <div class="profile-glow-ring"></div>
+                        <div class="profile-glow-ring ring-2"></div>
+                        <div class="profile-circle">
+                            <img src="profile.jpg" alt="Jay Kumar - Profile Photo" class="profile-img" />
+                        </div>
+                        <div class="profile-badge">
+                            <span>👨‍💻</span> Available for Placement
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-scroll-indicator">
+                <a href="#about" aria-label="Scroll down">
+                    <span class="mouse">
+                        <span class="wheel"></span>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Stats Counter Section -->
+        <section class="stats-section">
+            <div class="container stats-container">
+                <div class="stat-card reveal">
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">ML & Mobile Projects</span>
+                </div>
+                <div class="stat-card reveal">
+                    <span class="stat-number" data-target="2">0</span>
+                    <span class="stat-label">Internships</span>
+                </div>
+                <div class="stat-card reveal">
+                    <span class="stat-number" data-target="10">0</span>
+                    <span class="stat-label">Tech Stack Tools</span>
+                </div>
+                <div class="stat-card reveal">
+                    <span class="stat-number" data-target="300">0</span>
+                    <span class="stat-label">+ LeetCode Solved</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tagline">Introduction</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <p class="lead-text">
+                            I am a motivated Software Engineering student at Sharda University, specializing in Data Structures, Algorithms, and Application Development.
+                        </p>
+                        <p>
+                            I have a strong command over programming languages like Java and Python. My passion lies in developing practical technology solutions that solve real-life challenges, such as building intuitive mobile applications and integrating machine learning models for on-device predictions.
+                        </p>
+                        <p>
+                            I am eager to join a progressive development team where I can apply my problem-solving skills, software design principles, and machine learning expertise to write clean, efficient, and scale-ready code.
+                        </p>
+                        
+                        <div class="personal-details-list">
+                            <div class="detail-item">
+                                <span class="detail-label">Location:</span>
+                                <span class="detail-value">India</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Email:</span>
+                                <span class="detail-value">jaykumarshrivatsav1@gmail.com</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Work Status:</span>
+                                <span class="detail-value text-highlight">Open to Placements / Internships</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-highlights reveal">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3>DSA & OOP Specialist</h3>
+                            <p>Strong foundations in object-oriented programming, data structures, algorithms, and logical problem solving.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                            </div>
+                            <h3>App & ML Integration</h3>
+                            <p>Proficient in building mobile client applications and deploying/optimizing machine learning model weights at scale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section section-padding alt-bg">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tagline">My Background</span>
+                    <h2 class="section-title">Education</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="education-timeline reveal">
+                    <!-- Education Item 1 -->
+                    <div class="edu-item">
+                        <div class="edu-dot"></div>
+                        <div class="edu-content">
+                            <div class="edu-header">
+                                <span class="edu-duration">2023 - Present</span>
+                                <h3 class="edu-degree">B. Tech (Computer Science Engineering)</h3>
+                                <h4 class="edu-institute">Sharda University</h4>
+                            </div>
+                            <p class="edu-description">
+                                Core Coursework: Data Structures & Algorithms, Object-Oriented Programming (OOP), Operating Systems, Computer Networks, Database Management Systems (DBMS).
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Education Item 2 -->
+                    <div class="edu-item">
+                        <div class="edu-dot"></div>
+                        <div class="edu-content">
+                            <div class="edu-header">
+                                <span class="edu-duration">2023</span>
+                                <h3 class="edu-degree">AISSE (Class XII) - CBSE</h3>
+                                <h4 class="edu-institute">St. Karen’s High School</h4>
+                            </div>
+                            <p class="edu-description">
+                                Completed high school specialization in Science (PCM - Physics, Chemistry, Mathematics) with Computer Science.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tagline">Superpowers</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-category-card reveal">
+                        <h3 class="category-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                            Programming
+                        </h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Java / Python</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>C / C++</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>JavaScript / React</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- App Dev & Data Analysis -->
+                    <div class="skill-category-card reveal">
+                        <h3 class="category-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                            App Dev & Analytics
+                        </h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Pandas, NumPy, Matplotlib</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Flutter (Mobile App Dev)</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Git / GitHub Versioning</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="style: 85%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Concepts & Soft Skills -->
+                    <div class="skill-category-card reveal">
+                        <h3 class="category-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                            Core CS & Soft Skills
+                        </h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>DSA / OOP / DBMS / Networks</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Active Listening / Team Building</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Leadership</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section section-padding alt-bg">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tagline">My Career Path</span>
+                    <h2 class="section-title">Experience</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="experience-timeline reveal">
+                    <!-- Exp Item 0 - IIT KGP (Most Recent) -->
+                    <div class="exp-item">
+                        <div class="exp-badge">Internship</div>
+                        <div class="exp-panel">
+                            <span class="exp-date">May 11, 2026 – Jul 11, 2026</span>
+                            <h3 class="exp-role">GIS, Machine Learning & Deep Learning Internship</h3>
+                            <h4 class="exp-company">IIT Kharagpur</h4>
+                            <ul class="exp-bullets">
+                                <li>Worked on integrating Geographic Information System (GIS) data with machine learning and deep learning models for spatial analysis and prediction.</li>
+                                <li>Preprocessed and analyzed satellite and remote sensing imagery using Python, GDAL, and QGIS for feature extraction.</li>
+                                <li>Built and trained CNN-based deep learning models for land-use and land-cover classification, improving prediction accuracy.</li>
+                                <li>Collaborated with research mentors to document methodology and optimize model performance on real-world geospatial datasets.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Exp Item 1 -->
+                    <div class="exp-item">
+                        <div class="exp-badge">Internship</div>
+                        <div class="exp-panel">
+                            <span class="exp-date">May 2025 – Jun 2025</span>
+                            <h3 class="exp-role">Full Stack Development & Java Programing Bootcamp</h3>
+                            <h4 class="exp-company">Self-Led / Academic Program</h4>
+                            <ul class="exp-bullets">
+                                <li>Learned backend Java programming modules and designed backend modules using JavaScript and Node.js.</li>
+                                <li>Ingested and analyzed customer data records using Pandas, NumPy, and Matplotlib.</li>
+                                <li>Collaborated with team developers via GitHub, applying OOP and DSA concepts to optimize code.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Exp Item 2 -->
+                    <div class="exp-item">
+                        <div class="exp-badge">Leadership</div>
+                        <div class="exp-panel">
+                            <span class="exp-date">Jan 2025 - Present</span>
+                            <h3 class="exp-role">Project Division Lead</h3>
+                            <h4 class="exp-company">Academic Software Labs</h4>
+                            <ul class="exp-bullets">
+                                <li>Coordinated division workflows for mobile and machine learning project deliverables, ensuring deadlines were met.</li>
+                                <li>Exercised active listening and team building principles to resolve structural and logic design conflicts.</li>
+                                <li>Managed Git branch mergers, documentation directories, and peer reviews on GitHub.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tagline">My Portfolio</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <!-- Category Filtering Controls -->
+                <div class="filter-controls reveal">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ai-ml">AI & ML</button>
+                    <button class="filter-btn" data-filter="web">Web & Mobile</button>
+                    <button class="filter-btn" data-filter="systems">Systems & Prototyping</button>
+                </div>
+                
+                <!-- Project Grid -->
+                <div class="project-grid reveal">
+                    <!-- RegGuard AI (Flagship RegTech Project) -->
+                    <div class="project-card" data-category="ai-ml" style="border: 1px solid rgba(59, 130, 246, 0.4); background: linear-gradient(180deg, rgba(59, 130, 246, 0.08) 0%, rgba(17, 24, 39, 0.8) 100%);">
+                        <div class="project-card-header">
+                            <span class="project-card-type" style="color: #60a5fa; font-weight:700;">★ RegTech & FinTech AI Engine</span>
+                            <h3 class="project-card-title">RegGuard AI - RBI PA Compliance Engine</h3>
+                        </div>
+                        <div class="project-card-body">
+                            <p>Automated AI Merchant Risk & Regulatory Compliance system built to solve the RBI Payment Aggregator onboarding embargo for 57,000+ waitlisted SMEs.</p>
+                            <div class="project-metrics">
+                                <div class="metric"><span class="metric-val">100% PA Compliance</span><span class="metric-name">RBI Audit Proof</span></div>
+                                <div class="metric"><span class="metric-val">SHAP & XGBoost</span><span class="metric-name">Explainable AI</span></div>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag" style="background:rgba(59,130,246,0.2); color:#60a5fa;">RegTech</span>
+                                <span class="tag">XGBoost & DistilBERT</span>
+                                <span class="tag">NLP Web Scraping</span>
+                                <span class="tag">SHAP XAI</span>
+                            </div>
+                        </div>
+                        <div class="project-card-footer" style="padding-top:12px;">
+                            <a href="regguard_app.html" target="_blank" class="btn-card-action" style="background: var(--gradient-hero); color: #fff; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; width: 100%;">
+                                Launch RegGuard Portal 🚀
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="ai-ml">
+                        <div class="project-card-header">
+                            <span class="project-card-type">AI & Machine Learning</span>
+                            <h3 class="project-card-title">AI Skin Injury Classifier</h3>
+                        </div>
+                        <div class="project-card-body">
+                            <p>AI-based mobile application to detect and classify skin lesions using the HAM10000 dataset and EfficientNetB0 image classification weights.</p>
+                            <div class="project-metrics">
+                                <div class="metric"><span class="metric-val">EfficientNetB0</span><span class="metric-name">Network Model</span></div>
+                                <div class="metric"><span class="metric-val">XAI heatmaps</span><span class="metric-name">Transparency</span></div>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Explainable AI</span>
+                                <span class="tag">HAM10000</span>
+                                <span class="tag">Flutter</span>
+                            </div>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn-card-action explore-project" data-project-id="1">Explore Details</button>
+                            <a href="https://github.com/Jaykumar06" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Profile">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-card-body-wrapper" style="height:100%; display:flex; flex-direction:column; justify-content:space-between;">
+                            <div>
+                                <div class="project-card-header">
+                                    <span class="project-card-type">Web & Mobile</span>
+                                    <h3 class="project-card-title">Travel Ginnie Guide</h3>
+                                </div>
+                                <div class="project-card-body">
+                                    <p>Smart travel assistant application using Python, NLP, and machine learning models to provide customized itineraries and budgets.</p>
+                                    <div class="project-metrics">
+                                        <div class="metric"><span class="metric-val">NLP Assistant</span><span class="metric-name">Natural Query</span></div>
+                                        <div class="metric"><span class="metric-val">Dynamic</span><span class="metric-name">Budget Models</span></div>
+                                    </div>
+                                    <div class="project-tags">
+                                        <span class="tag">Python</span>
+                                        <span class="tag">NLP</span>
+                                        <span class="tag">Machine Learning</span>
+                                        <span class="tag">API Integration</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card-footer">
+                                <button class="btn-card-action explore-project" data-project-id="2">Explore Details</button>
+                                <a href="https://github.com/Jaykumar06" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Profile">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-category="systems">
+                        <div class="project-card-body-wrapper" style="height:100%; display:flex; flex-direction:column; justify-content:space-between;">
+                            <div>
+                                <div class="project-card-header">
+                                    <span class="project-card-type">Systems & Prototyping</span>
+                                    <h3 class="project-card-title">Ambulance Siren App</h3>
+                                </div>
+                                <div class="project-card-body">
+                                    <p>Real-time ambulance siren detection app using Python and Machine Learning to classify siren audio in a 100m geofence.</p>
+                                    <div class="project-metrics">
+                                        <div class="metric"><span class="metric-val">100m Geofence</span><span class="metric-name">Siren Proximity</span></div>
+                                        <div class="metric"><span class="metric-val">Audio Classifier</span><span class="metric-name">Siren Profile</span></div>
+                                    </div>
+                                    <div class="project-tags">
+                                        <span class="tag">Python</span>
+                                        <span class="tag">Audio Processing</span>
+                                        <span class="tag">Machine Learning</span>
+                                        <span class="tag">Netlify</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card-footer">
+                                <button class="btn-card-action explore-project" data-project-id="3">Explore Details</button>
+                                <a href="https://github.com/Jaykumar06/Ambulance-Siren-App" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repository">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding alt-bg">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tagline">Get In Touch</span>
+                    <h2 class="section-title">Contact Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <h3>Let's talk about placement opportunities!</h3>
+                        <p>I am actively looking for software engineering, cloud administration, systems programming, or DevOps roles. Let me know if you would like a resume walkthrough or a quick technical discussion.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="method-item">
+                                <div class="method-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                </div>
+                                <div class="method-text">
+                                    <span>Send an Email</span>
+                                    <a href="mailto:jaykumarshrivatsav1@gmail.com">jaykumarshrivatsav1@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="method-item">
+                                <div class="method-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                </div>
+                                <div class="method-text">
+                                    <span>Based in</span>
+                                    <span>India</span>
+                                </div>
+                            </div>
+                            <div class="method-item">
+                                <div class="method-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                                </div>
+                                <div class="method-text">
+                                    <span>Phone</span>
+                                    <a href="tel:9155704674">9155704674</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container reveal">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required placeholder=" ">
+                                <label for="name">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required placeholder=" ">
+                                <label for="email">Your Email</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" placeholder=" ">
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Send Message</span>
+                                <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            </button>
+                        </form>
+                        <div id="form-success" class="form-feedback-message success-message">Message sent successfully! Thank you.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2026 Jay Kumar. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/Jaykumar06" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Detailed Project Modal Overlay -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-body-content" id="modal-body-content">
+                <!-- Javascript will render details here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
